@@ -4,11 +4,27 @@ import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplet
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 
-export default function SearchBar() {
+export default function SearchBar({cityHandler}) {
     return (
         <View style={{marginTop:15, flexDirection:"row"}}>
-            {/* <Text>SearchBar</Text> */}
             <GooglePlacesAutocomplete 
+                query={{key:"AIzaSyDxReVHA4SmhzNgvEvsQ1RX9scyPqgCZtY"}}
+
+                onPress={(data, details = null) => {
+                    console.log(data.description)
+                    const city = data.description.split(",")[0];
+                    cityHandler (city);
+                }}
+                
+            //   requestUrl={{
+            //     useOnPlatform: 'all', // or "all"
+            //     url:
+            //       'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api', // or any proxy server that hits https://maps.googleapis.com/maps/api
+            //     headers: {
+            //       Authorization: `AIzaSyDxReVHA4SmhzNgvEvsQ1RX9scyPqgCZtY`, // if required for your proxy
+            //     },
+            //   }}  
+
             placeholder='Search' 
             styles={{
                 textInput: {
