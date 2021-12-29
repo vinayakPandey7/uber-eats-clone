@@ -11,7 +11,6 @@ export default function SearchBar({cityHandler}) {
                 query={{key:"AIzaSyDxReVHA4SmhzNgvEvsQ1RX9scyPqgCZtY"}}
 
                 onPress={(data, details = null) => {
-                    console.log(data.description)
                     const city = data.description.split(",")[0];
                     cityHandler (city);
                 }}

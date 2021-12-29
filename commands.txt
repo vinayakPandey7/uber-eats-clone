@@ -1,0 +1,23 @@
+npx create-react-native-app uber-eats-clone
+cd to folder
+git init
+git add .
+git commit -m "First commit"
+git remote add origin https://github.com/vinayakPandey7/uber-eats-clone.git
+git push origiin main
+git status
+
+npm add react-native-vector-icons
+npm i react-native-google-places-autocomplete
+npx add react-native-elements
+npx add @react-navigation/native
+npm add @react-navigation/stack
+npm add react-native-gesture-handler
+npm add react-native-bouncy-checkbox
+npm add tslib
+npm add react-redux
+
+
+
+npm add react-native-reanimated
+npm add reanimated-bottom-sheet
